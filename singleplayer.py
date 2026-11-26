@@ -14,7 +14,7 @@ def connect_four():
         # logically this should account for player moves, add this after everything else works tho
         pass
     def _player_move():
-        pass
+        # ok im thinking im doing internal methods wrong so im just gonna mvoe this to a new file
 
     def _check_win():
         pass
@@ -27,6 +27,22 @@ def connect_four():
         grid.append(["| X |", "| X |", "| X |", "| X |", "| X |", "| X |" ])
     _print_grid()
 
+    # for for loop, also going to have an internal strategy method for the robot
+    ongoing = True
+    player_win = None
+    ai_strat = None # ik its not an ai but im not typing it as "algo strat"
+
+    # need to lock in so bad rn
+
+    while ongoing == True:
+        print("were doing connect 4")
+        token = input("One character for token ")
+        _print_grid()
+        player_inp = int(input("What column would you like to place your token in ")) - 1
+        _player_move(player_inp)
+        # yay finally on player part
+
+# i keep doomscrolling slack, PLEASE ban me
 # so we ARE gonna have to make an ai play thing so thats gonna be 'fun'
 # i also am doing this to learn internal methods bc the last time i did internal methods was literally four years ago
 
