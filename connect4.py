@@ -27,10 +27,20 @@ def check_win(grid):
             # checks for VERTICAL BINGO (connect??? idfk man)
 
             if row + 3 < len(grid):
-                if checkme == grid[row + 1][column] and spot == grid[row + 2][column] and spot == grid[row + 3][column]:
+                if checkme == grid[row + 1][column] and checkme == grid[row + 2][column] and checkme == grid[row + 3][column]:
                     return True
+                # im actually a chud, i keep thinking of variable names and then typing wrong ones
+                # slime me OUT alr
 
+            if row + 3 < len(grid) and column + 3 < len(grid[0]):
+                if checkme == grid[row + 1][column + 1] and checme == grid[row + 2][column + 2] and checme == grid[row + 3][column + 3]:
+                    return True
             
+            if row -3 <= 0 and column + 3 <= len(grid[0]):
+                if checkme == grid[row -1 ][column + 1] and checkme == grid[row-2][column+2] and checkme == grid[row-3][column+3]:
+                    return True
+            
+            return False
 
 def something_important_later():
     pass
