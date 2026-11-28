@@ -14,8 +14,23 @@ def player_move(col_drop, token, grid):
             grid[x][col_drop] = strin 
             return
 
-def check_win():
-    pass
+def check_win(grid):
+    for row in range(len(grid)):
+        for column in range(len(grid[0])):
+            checkme = grid[row][column]
+            if checkme == "|   |":
+                continue # another rare cont reference
+            
+            if column + 3 < len(grid[0]):
+                if checkme == grid[row][column + 1] and checkme == grid[row][column + 2] and checkme == grid[row][column + 3]:
+                    return True
+            # checks for VERTICAL BINGO (connect??? idfk man)
+
+            if row + 3 < len(grid):
+                if checkme == grid[row + 1][column] and spot == grid[row + 2][column] and spot == grid[row + 3][column]:
+                    return True
+
+            
 
 def something_important_later():
     pass
